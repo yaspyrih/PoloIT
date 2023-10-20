@@ -13,6 +13,7 @@ const SearchBar = ({posts, setSearchResults}) => {
     }
   return (
     <header>
+        <div><h1 className='title'>Empresas del Polo IT</h1></div>
         <form className='search' onSubmit={handleSubmit}>
             <input 
                 className='search__input'
