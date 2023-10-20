@@ -16,20 +16,20 @@ html {
 }
 
 body {
-  background-color: #000;
-  font-family: 'Nunito', sans-serif;
+  background-color: #BEADFA;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 p {
-  color: whitesmoke;
+  color: #FFF8C9;
   margin-top: 0.8em;
 }
 
 article {
   margin: 1em;
   padding: 1em;
-  background-color: midnightblue;
-  color: whitesmoke;
+  background-color: #D0BFFF;
+  color: gray;
   border-radius: 15px;
 }
 
@@ -39,7 +39,7 @@ img {
 }
 
 header {
-  background-color: gray;
+  background-color: #DFCCFB;
   padding: 1em;
   display: flex;
   justify-content: center;
@@ -50,10 +50,10 @@ header {
 
 .search {
   width: 80%;
-  border: 2px solid #000;
+  border: solid #BEADFA;
   border-radius: 2em;
   overflow: hidden;
-  font-size: 0.5em;
+  font-size: 1em;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -70,7 +70,7 @@ header {
 
 .search__button,
 .search__input {
-  background-color: #fff;
+  background-color: #FFF8C9;
   border: none;
   outline: none;
 }
@@ -78,13 +78,14 @@ header {
 .search__input {
   padding: 1em;
   width: 85%;
+  height: 10%;
 }
 
 .search__button {
   width: 15%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding-right: 0.5em;
-  color: gray;
+  color: #BEADFA;
   display: grid;
   place-content: center;
 }
