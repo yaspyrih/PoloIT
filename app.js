@@ -1,0 +1,34 @@
+const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
+
+const app = express();
+
+const PORT = process.env.PORT || 8080;
+const MONGODB_URI = process.env.MONGODB_URI;
+
+//CONEXION A BBDD
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+  .then(() => {
+    console.log('Conexión a la base de datos exitosa');
+  })
+  .catch((error) => {
+    console.error('Error al conectar a la base de datos:', error);
+  });
+
+app.get('/', (req, res) => {
+  res.send('hello');
+});
+
+
+//RUTAS
+const empresasRoutes = require('./routes/empresasRoutes');
+
+app.use('/api', empresasRoutes);
+
+app.listen(PORT, () => {
+  console.log(`El servidor está escuchando en el puerto ${PORT}`);
+});
