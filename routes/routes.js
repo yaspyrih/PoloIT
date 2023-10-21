@@ -8,8 +8,8 @@ router.get('/empresas', controller.getEmpresas);
 // Ruta por ID
 router.get('/empresas/:id', controller.getEmpresaById);
 
-// // Create
-// router.post('/empresas', controller.createEmpresa);
+// Create
+router.post('/empresas', controller.createEmpresa);
 
 // // Update
 // router.put('/empresas/:id', controller.updateEmpresa);

@@ -25,7 +25,18 @@ const controller = {
     }
   },
 
+  createEmpresa: async (req, res) => {
+    try {
+      const nuevaEmpresa = new Empresa(req.body);
+      const empresaGuardada = await nuevaEmpresa.save();
+      res.status(201).json(empresaGuardada);
+    } catch (error) {
+      res.status(500).json({ error: 'Error al crear una nueva empresa' });
+    }
+  },
+
   
+
 };
 
 module.exports = controller;
