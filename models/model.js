@@ -10,4 +10,7 @@ const empresaData = new mongoose.Schema({
   }
 });
 
-module.exports = empresaData;
+const Empresa = mongoose.model('Empresa', empresaData);
+
+module.exports = Empresa;
+

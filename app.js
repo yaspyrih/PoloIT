@@ -25,9 +25,9 @@ app.get('/', (req, res) => {
 
 
 //RUTAS
-const empresasRoutes = require('./routes/empresasRoutes');
+const routes = require('./routes/routes');
 
-app.use('/api', empresasRoutes);
+app.use('/api', routes);
 
 app.listen(PORT, () => {
   console.log(`El servidor está escuchando en el puerto ${PORT}`);
