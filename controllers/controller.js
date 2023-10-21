@@ -20,7 +20,7 @@ const controller = {
       }
       res.json(empresa);
     } catch (error) {
-      res.status(500).json({ error: 'Error al obtener la empresa por ID' });
+      res.status(500).json({ error: 'No se pudo encontrar la empresa' });
       console.log(error);
     }
   },
@@ -31,11 +31,22 @@ const controller = {
       const empresaGuardada = await nuevaEmpresa.save();
       res.status(201).json(empresaGuardada);
     } catch (error) {
-      res.status(500).json({ error: 'Error al crear una nueva empresa' });
+      res.status(500).json({ error: 'No se pudo crear la nueva empresa' });
     }
   },
 
-  
+  updateEmpresa: async (req, res) => {
+    try {
+      const empresaUpdate = await Empresa.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      if (!empresaUpdate) {
+        return res.status(404).json({ error: 'Empresa no encontrada' });
+      }
+      res.json(empresaUpdate);
+    } catch (error) {
+      res.status(500).json({ error: 'No se pudo actualizar la empresa' });
+    }
+  },
+
 
 };
 

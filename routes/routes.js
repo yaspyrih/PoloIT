@@ -11,8 +11,8 @@ router.get('/empresas/:id', controller.getEmpresaById);
 // Create
 router.post('/empresas', controller.createEmpresa);
 
-// // Update
-// router.put('/empresas/:id', controller.updateEmpresa);
+// Update
+router.put('/empresas/:id', controller.updateEmpresa);
 
 // // Delete
 // router.delete('/empresas/:id', controller.deleteEmpresa);
