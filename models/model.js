@@ -6,7 +6,8 @@ const empresaData = new mongoose.Schema({
   categorias: [String],
   enlaces: {
     redesSociales: String,
-    paginaWeb: String
+    paginaWeb: String,
+    video: String,
   }
 });
 

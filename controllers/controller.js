@@ -47,6 +47,18 @@ const controller = {
     }
   },
 
+  deleteEmpresa: async (req, res) => {
+    try {
+      const empresaEliminada = await Empresa.findByIdAndRemove(req.params.id);
+      if (!empresaEliminada) {
+        return res.status(404).json({ error: 'Empresa no encontrada' });
+      }
+      res.json({ mensaje: 'La empresa fue eliminada' });
+    } catch (error) {
+      res.status(500).json({ error: 'Error al eliminar la empresa' });
+    }
+  },
+
 
 };
 
