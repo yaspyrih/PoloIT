@@ -1,15 +1,13 @@
 import Navigation from "./Navigation/Nav";
 import Companies from "./Companies/Companies";
-import Service from "./Sidebar/Service/Service";
-import Category from "./Sidebar/Category/Category";
+import Sidebar from "./Sidebar/Sidebar";
 
 function App() {
   return (
   <>
+  <Sidebar/>
   <Navigation/>
   <Companies/>
-  <Category/>
-  <Service/>
   </>
 );
 }
