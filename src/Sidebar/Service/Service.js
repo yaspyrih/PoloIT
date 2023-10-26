@@ -2,7 +2,7 @@ import './Service.css';
 
 function Service() {
   return (
-    <div>Service</div>
+    <div>Servicios</div>
   )
 }
 export default Service

@@ -1,4 +1,5 @@
 .card-container {
+    font-family: Helvetica, sans-serif;
     display: flex;
     flex-wrap: wrap;
     margin-left: 20rem;
