@@ -15,7 +15,19 @@ function Category() {
         </label>
         <label className='sidebar-label-container'>
           <input type="radio" name="test" />
-          <span className='checkmark'></span>Informática
+          <span className='checkmark'></span>Hardware
+        </label>
+        <label className='sidebar-label-container'>
+          <input type="radio" name="test" />
+          <span className='checkmark'></span>Software
+        </label>
+        <label className='sidebar-label-container'>
+          <input type="radio" name="test" />
+          <span className='checkmark'></span>Finanzas
+        </label>
+        <label className='sidebar-label-container'>
+          <input type="radio" name="test" />
+          <span className='checkmark'></span>Capacitación
         </label>
       </div></>
   );
