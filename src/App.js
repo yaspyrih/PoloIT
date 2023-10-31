@@ -65,12 +65,15 @@ function filteredData(companies, selected, query) {
     linkedin={linkedin}
     email={email}
     />
-  ))
+  )
+);
 }
+
+const result = filteredData(companies, selectedCategory, query)
 
   return (
   <>
-  <Sidebar/>
+  <Sidebar handleChange={handleChange}/>
   <Navigation/>
   <Companies/>
   </>

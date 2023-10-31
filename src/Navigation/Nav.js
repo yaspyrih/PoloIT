@@ -1,5 +1,5 @@
-import {FiHeart} from 'react-icons/fi';
-import {AiOutlineUserAdd} from 'react-icons/ai';
+import {MdDarkMode} from 'react-icons/md';
+import {BsSun} from 'react-icons/bs';
 import './Nav.css';
 
 function Nav() {
@@ -13,11 +13,17 @@ function Nav() {
     </div>
     <div className='profile-container'>
       <a href='#'>
+      <MdDarkMode className='nav-icons'/>
+      </a>
+      <a href='#'>
+      <BsSun className='nav-icons'/>
+      </a>
+      {/* <a href='#'>
       <FiHeart className='nav-icons'/>
       </a>
       <a href='#'>
       <AiOutlineUserAdd className='nav-icons'/>
-      </a>
+      </a> */}
 
     </div>
 

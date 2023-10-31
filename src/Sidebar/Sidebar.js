@@ -2,11 +2,11 @@ import Category from './Category/Category';
 import Service from "./Service/Service";
 import './Sidebar.css';
 
-function Sidebar() {
+function Sidebar({handleChange}) {
   return <>
     <section className='sidebar'>
-        <Category/>
-        <Service/>
+        <Category handleChange={handleChange}/>
+        <Service handleChange={handleChange}/>
     </section>
     </>
   
