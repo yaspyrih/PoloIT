@@ -13,26 +13,8 @@ function Category({handleChange}) {
 
         <Input
         handleChange={handleChange}
-        value="Software"
-        company="Software"
-        name="test"
-        />
-        <Input
-        handleChange={handleChange}
-        value="Hardware"
-        company="Hardware"
-        name="test"
-        />
-        <Input
-        handleChange={handleChange}
-        value="Big Data"
-        company="Big Data"
-        name="test"
-        />
-        <Input
-        handleChange={handleChange}
-        value="Inteligencia Artificial"
-        company="Inteligencia Artificial"
+        value="Tecnología"
+        company="Tecnología"
         name="test"
         />
         <Input
@@ -43,20 +25,8 @@ function Category({handleChange}) {
         />
         <Input
         handleChange={handleChange}
-        value="Recursos Humanos"
-        company="Recursos Humanos"
-        name="test"
-        />
-        <Input
-        handleChange={handleChange}
         value="Consultoría"
         company="Consultoría"
-        name="test"
-        />
-        <Input
-        handleChange={handleChange}
-        value="Idiomas"
-        company="Idiomas"
         name="test"
         />
         </div>
