@@ -1,3 +1,7 @@
+import {BiHomeHeart} from 'react-icons/bi';
+import {FaLinkedinIn} from 'react-icons/fa';
+import {AiFillMail} from 'react-icons/ai';
+
 function Card({img, company, description, service, category, web, linkedin, email}) {
   return ( 
   <section className='card'>
@@ -6,8 +10,10 @@ function Card({img, company, description, service, category, web, linkedin, emai
   alt={company} className='card-img'></img>
   <h2 className='company'>{company}</h2>
   <p className='description'>{description}</p>
-  <h3 className='service'>{service}</h3>
-  <h4 className='category'>{category}</h4>
+  <h5 className='service'>{service} {category}</h5>
+  <BiHomeHeart href={web}/>
+  <FaLinkedinIn href={linkedin}/>
+  <AiFillMail mailto={email}/>
   </section>
   )
 }

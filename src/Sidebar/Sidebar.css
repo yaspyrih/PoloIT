@@ -1,3 +1,6 @@
+.title {
+  padding: 1em;
+}
 .sidebar {
     width: 15%;
     position: fixed;

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "./Navigation/Nav";
 import Companies from "./Companies/Companies";
 import Sidebar from "./Sidebar/Sidebar";
+import './index.css'
 
 // ---------Database---------
 
@@ -20,7 +21,9 @@ function App() {
     setQuery(event.target.value)
   }
 
-  const filteredItems = companies.filter(company => company.company.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()!==-1)
+  const filteredItems = companies.filter((company)=>
+  company.company.toLocaleLowerCase().indexOf(query.toLocaleLowerCase())!==
+  -1
   );
 
 // ---------Radio filter-----------
