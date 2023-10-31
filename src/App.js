@@ -53,7 +53,8 @@ function filteredData(companies, selected, query) {
       );
   }
 
-  return filteredCompanies.map(({img, company, description, service, category, web, linkedin, email})=>(
+  return filteredCompanies.map(
+    ({img, company, description, service, category, web, linkedin, email})=>(
     <Card 
     key={Math.random()}
     img={img}
@@ -74,8 +75,8 @@ const result = filteredData(companies, selectedCategory, query)
   return (
   <>
   <Sidebar handleChange={handleChange}/>
-  <Navigation/>
-  <Companies/>
+  <Navigation query={query} handleInputChange={handleInputChange} />
+  <Companies result={result}/>
   </>
 );
 }
