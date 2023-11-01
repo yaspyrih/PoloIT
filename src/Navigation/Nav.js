@@ -12,7 +12,7 @@ function Nav(props) {
       className='search-input'
       value = {query}
       onChange = {handleInputChange}
-      placeholder='Ingrese una empresa o servicio.'/>
+      placeholder='Ingrese una empresa.'/>
     </div>
     <div className='profile-container'>
       
