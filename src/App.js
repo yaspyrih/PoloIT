@@ -1,87 +1,65 @@
 import { useState } from "react";
-import Navigation from "./Navigation/Nav";
+import Nav from "./Navigation/Nav";
 import Companies from "./Companies/Companies";
+import data from "./db/data";
 import Sidebar from "./Sidebar/Sidebar";
-import './index.css'
-
-// ---------Database---------
-
-import companies from './db/data';
 import Card from "./components/Card";
+import "./index.css";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [query, setQuery] = useState("");
 
-// ---------Input filter-----------
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
+  };
 
-  
+  const handleChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
 
-  const handleInputChange = event => {
-    setQuery(event.target.value)
-  }
+  function filteredData(data, selected, query) {
+    let filteredItems = data;
 
-  const filteredItems = companies.filter((company)=>
-  company.company.toLocaleLowerCase().indexOf(query.toLocaleLowerCase())!==
-  -1
-  );
-
-// ---------Radio filter-----------
-
-const handleChange = event => {
-  setSelectedCategory(event.target.value)
-}
-
-// ---------Buttons filter-----------
-/* const handleClick = event =>{
-  setSelectedCategory(event.target.value)
-} */
-
-function filteredData(companies, selected, query) {
-  let filteredCompanies = companies
-
-//Filtering input items
-  if (query){
-    filteredCompanies = filteredItems
-  }
-
-  //Selected filter
-
-  if(selected) {
-    filteredCompanies = filteredCompanies.filter(
-      ({category, company, service})=>
-      category === selected||
-      company===selected || 
-      service===selected
+    if (query) {
+      filteredItems = filteredItems.filter((item) =>
+        item.company.toLowerCase().includes(query.toLowerCase())
       );
+    }
+
+    if (selected) {
+      filteredItems = filteredItems.filter(
+        ({ company, service, category }) =>
+          company === selected || service === selected || category === selected
+      );
+    }
+
+    return filteredItems.map(
+      ({ img, company, description, service, category, web, linkedin, email }) => (
+        <Card
+          key={company}
+          img={img}
+          company={company}
+          description={description}
+          service={service}
+          category={category}
+          web={web}
+          linkedin={linkedin}
+          email={email}
+        />
+      )
+    );
   }
 
-  return filteredCompanies.map(
-    ({img, company, description, service, category, web, linkedin, email})=>(
-    <Card 
-    key={Math.random()}
-    img={img}
-    company={company}
-    description={description}
-    service={service}
-    category={category}
-    web={web}
-    linkedin={linkedin}
-    email={email}
-    />
-  )
-);
-}
-
-const result = filteredData(companies, selectedCategory, query)
+  const result = filteredData(data, selectedCategory, query);
 
   return (
-  <>
-  <Sidebar handleChange={handleChange}/>
-  <Navigation query={query} handleInputChange={handleInputChange} />
-  <Companies result={result}/>
-  </>
-);
+    <>
+      <Sidebar handleChange={handleChange} />
+      <Nav query={query} handleInputChange={handleInputChange} />
+      <Companies result={result} />
+    </>
+  );
 }
 
 export default App;

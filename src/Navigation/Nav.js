@@ -2,28 +2,25 @@ import {MdDarkMode} from 'react-icons/md';
 import {BsSun} from 'react-icons/bs';
 import './Nav.css';
 
-function Nav() {
+function Nav(props) {
+  const {query, handleInputChange} = props;
   return (
     <nav>
     <div className='nav-container'>
       <input 
       type="text" 
-      className='search-input' 
+      className='search-input'
+      value = {query}
+      onChange = {handleInputChange}
       placeholder='Ingrese una empresa o servicio.'/>
     </div>
     <div className='profile-container'>
-      <a href='#'>
+      
       <MdDarkMode className='nav-icons'/>
-      </a>
-      <a href='#'>
+      
+      
       <BsSun className='nav-icons'/>
-      </a>
-      {/* <a href='#'>
-      <FiHeart className='nav-icons'/>
-      </a>
-      <a href='#'>
-      <AiOutlineUserAdd className='nav-icons'/>
-      </a> */}
+      
 
     </div>
 

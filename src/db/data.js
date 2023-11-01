@@ -1,7 +1,6 @@
-import { AiFillStar } from "react-icons/ai";
 
 const data = [
-  {
+    {
     img: "https://2c5w.com/wp-content/uploads/2019/04/Logo-2C5W-clean.png",
     company: "2C5W",
     description: "Transformamos desafíos y problemas organizacionales en oportunidades y soluciones a través de relaciones de confianza, credibilidad y con honestidad intelectual. Conciencia y Competencia para responder las 5W.",
