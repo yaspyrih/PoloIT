@@ -55,9 +55,10 @@ function App() {
 
   return (
     <>
-      <Sidebar handleChange={handleChange} />
-      <Nav query={query} handleInputChange={handleInputChange} />
-      <Companies result={result} />
+      <Nav query={query} handleInputChange={handleInputChange} className="nav"/>
+      <Sidebar handleChange={handleChange} className="sidebar"/>
+      <Companies result={result} className="card-container"/>
+      
     </>
   );
 }

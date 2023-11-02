@@ -3,7 +3,7 @@ import './Category.css';
 
 function Category({handleChange}) {
   return (
-      <div>
+      <div className='sidebar-category'>
         <h2 className='sidebar-title'>Categoría</h2>
         <div>
           <label className='sidebar-label-container'>
