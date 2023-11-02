@@ -17,9 +17,8 @@
   margin-top: auto;
 }
 .card-container {
-  position: absolute;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display:grid; 
+  grid-template-columns: minmax(100px 1fr) 1fr;
 }
 
 .a {

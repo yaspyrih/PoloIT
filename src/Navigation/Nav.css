@@ -1,3 +1,5 @@
+
+
 .nav-container {
     display: flexbox;
     
@@ -17,7 +19,7 @@ input {
     border-radius: 5px;
     
     right: 0;
-    width: 19rem;
+    width: 18rem;
 }
 
 .nav-icons {

@@ -2,7 +2,10 @@ import {MdDarkMode} from 'react-icons/md';
 import {BsSun} from 'react-icons/bs';
 import './Nav.css';
 
-
+function darkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
 
 function Nav(props) {
   const {query, handleInputChange} = props;
@@ -17,7 +20,7 @@ function Nav(props) {
       onChange = {handleInputChange}
       placeholder='Ingrese el nombre de una empresa.'/>
       
-      <MdDarkMode className='nav-icons'/>
+      <MdDarkMode onClick={darkMode} className='nav-icons'/>
       <BsSun className='nav-icons'/>
     </div>
     </nav>

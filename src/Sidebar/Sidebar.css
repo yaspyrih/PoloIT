@@ -10,7 +10,7 @@
     grid-template-columns: repeat(
     auto-fit);
     margin-left: 0.5rem;
-    width: 15%;
+    width: 1rem;
     position: fixed;
     height: 100%;
     z-index: 3; 
