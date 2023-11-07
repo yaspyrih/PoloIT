@@ -4,6 +4,7 @@ import Companies from "./Companies/Companies";
 import data from "./db/data";
 import Sidebar from "./Sidebar/Sidebar";
 import Card from "./components/Card";
+import DarkModeToggle from "./components/DarkModeToggle";
 import "./index.css";
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
 
   return (
     <>
+      <DarkModeToggle/>
       <Nav query={query} handleInputChange={handleInputChange} className="nav"/>
       <Sidebar handleChange={handleChange} className="sidebar"/>
       <Companies result={result} className="card-container"/>

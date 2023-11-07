@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {MdDarkMode} from 'react-icons/md';
+import {BsSun} from 'react-icons/bs';
 import './DarkModeToggle.css';
 
 function DarkModeToggle() {
@@ -14,9 +16,9 @@ function DarkModeToggle() {
       onClick={toggleTheme}
     >
       {isDarkMode ? (
-        <img src="dark-icon.svg" alt="Dark Mode" />
+        <MdDarkMode alt="Dark Mode" />
       ) : (
-        <img src="light-icon.svg" alt="Light Mode" />
+        <BsSun alt="Light Mode" />
       )}
     </button>
   );
