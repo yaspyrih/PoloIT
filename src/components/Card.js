@@ -1,6 +1,7 @@
 import {BiHomeHeart} from 'react-icons/bi';
 import {FaLinkedinIn} from 'react-icons/fa';
 import {AiFillMail} from 'react-icons/ai';
+import Modal from './Modal/Modal';
 
 function Card({img, company, description, service, category, web, linkedin, email}) {
   return ( 
@@ -13,7 +14,7 @@ function Card({img, company, description, service, category, web, linkedin, emai
   <h5 className='service'>{service} {category}</h5>
   <BiHomeHeart href={web}/>
   <FaLinkedinIn href={linkedin}/>
-  <AiFillMail mailto={email}/>
+  <Modal/>
   </section>
   )
 }
