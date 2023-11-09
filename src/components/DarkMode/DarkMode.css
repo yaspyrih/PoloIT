@@ -1,3 +1,4 @@
+/* Beginning of darkMode css sheet */
 .dark_mode {
     margin-top: -20px;
     margin-left: 10px;
@@ -66,3 +67,4 @@
 .dark_mode_input:checked + .dark_mode_label svg.moon {
     fill: #fff;
 }
+/* End of darkMode css sheet */

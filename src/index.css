@@ -1,3 +1,4 @@
+/* Beginning of index css sheet */
 :root {
   --body_background: white;
   --body_color: black;
@@ -18,7 +19,11 @@
     transition: all 0.3s ease-in-out;
 }
 
-.nav-and-toggle-container { 
+.html {
+  background-color: var(--body_background);
+}
+
+/* .nav-and-toggle-container { 
   display: grid; 
   grid-template-columns: repeat(2, 1fr); 
 } 
@@ -29,7 +34,7 @@
  
 .toggle-container { 
   
-} 
+}  */
 
 .nav {
   position: absolute;
@@ -52,3 +57,4 @@
     list-style: none;
   }
   
+/* End of index css sheet */

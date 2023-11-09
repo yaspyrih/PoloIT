@@ -1,3 +1,4 @@
+/* Beginning of sidebar css sheet */
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
@@ -15,3 +16,4 @@
     height: 100%;
     z-index: 3; 
   }
+  /* End of sidebar css sheet */

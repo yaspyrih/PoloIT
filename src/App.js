@@ -57,6 +57,7 @@ function App() {
 
   return (
     <>
+    
     <div className="nav-and-toggle-container"> 
       <div className="nav-container">
         <Nav query={query} handleInputChange={handleInputChange} className="nav"/>
@@ -67,7 +68,6 @@ function App() {
     </div> 
       <Sidebar handleChange={handleChange} className="sidebar"/>
       <Companies result={result} className="card-container"/>
-      
     </>
   );
 }
