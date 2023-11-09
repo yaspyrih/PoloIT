@@ -1,6 +1,4 @@
-* {
 
-}
 .sidebar-category {
   margin: 0.1em;
 }
@@ -70,10 +68,10 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: white;
+    /* background: white; */
   }
   
   .line {
     margin-top: 3rem;
-    border-color: #f7f7f7;
+    /* border-color: #f7f7f7; */
   }

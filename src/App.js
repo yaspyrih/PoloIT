@@ -1,11 +1,12 @@
 import { useState } from "react";
+import "./index.css";
 import Nav from "./Navigation/Nav";
 import Companies from "./Companies/Companies";
 import data from "./db/data";
 import Sidebar from "./Sidebar/Sidebar";
 import Card from "./components/Card";
-import DarkModeToggle from "./components/DarkModeToggle";
-import "./index.css";
+import DarkMode from "./components/DarkMode/DarkMode";
+
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -56,8 +57,14 @@ function App() {
 
   return (
     <>
-      <DarkModeToggle/>
-      <Nav query={query} handleInputChange={handleInputChange} className="nav"/>
+    <div className="nav-and-toggle-container"> 
+      <div className="nav-container">
+        <Nav query={query} handleInputChange={handleInputChange} className="nav"/>
+      </div> 
+      <div className="toggle-container">
+        <DarkMode/>
+      </div> 
+    </div> 
       <Sidebar handleChange={handleChange} className="sidebar"/>
       <Companies result={result} className="card-container"/>
       

@@ -1,12 +1,6 @@
-import {MdDarkMode} from 'react-icons/md';
-import {BsSun} from 'react-icons/bs';
-import DarkModeToggle from '../components/DarkModeToggle';
 import './Nav.css';
 
-function darkMode() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}
+
 
 function Nav(props) {
   const {query, handleInputChange} = props;
@@ -20,6 +14,7 @@ function Nav(props) {
       value = {query}
       onChange = {handleInputChange}
       placeholder='Ingrese el nombre de una empresa.'/>
+     
       
       
     </div>
