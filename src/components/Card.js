@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {BiHomeHeart} from 'react-icons/bi';
 import {FaLinkedinIn} from 'react-icons/fa';
 import {AiFillMail} from 'react-icons/ai';
