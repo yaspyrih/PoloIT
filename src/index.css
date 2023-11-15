@@ -1,0 +1,60 @@
+/* Beginning of index css sheet */
+:root {
+  --body_background: white;
+  --body_color: black;
+  --link_color: navy;
+}
+
+[data-theme="dark"] {
+  --body_background:#282c34;
+  --body_color: white;
+  --link_color: cyan;
+}
+
+* {
+    font-size: small;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--body_background);
+    color: var(--body_color);
+    transition: all 0.3s ease-in-out;
+}
+
+.html {
+  background-color: var(--body_background);
+}
+
+/* .nav-and-toggle-container { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+} 
+ 
+.nav-container { 
+  
+} 
+ 
+.toggle-container { 
+  
+}  */
+
+.nav {
+  position: absolute;
+}
+.sidebar {
+  position: absolute;
+  margin-top: auto;
+}
+.card-container {
+  display:grid; 
+  grid-template-columns: minmax(100px 1fr) 1fr;
+}
+
+.a {
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+  }
+  
+.li {
+    list-style: none;
+  }
+  
+/* End of index css sheet */

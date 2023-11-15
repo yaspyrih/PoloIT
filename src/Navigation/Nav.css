@@ -1,0 +1,32 @@
+/* Beginning of nav css sheet */
+
+.title {
+    margin: 1.3rem;
+    font-size: x-large;
+}
+
+input {
+    padding: 12px 20px;
+    border: none;
+    background: #dedddd;
+    outline: none;
+    margin: 1rem;
+    border-radius: 5px;
+    
+    right: 0;
+    width: 18rem;
+}
+
+.nav-icons {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 2rem;
+    color: rgb(14, 14, 61);
+}
+
+.profile-container {
+    position: absolute;
+    right: 0;
+    margin: 1rem;
+}
+/* End of sidebar nav sheet */

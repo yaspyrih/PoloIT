@@ -1,0 +1,19 @@
+/* Beginning of sidebar css sheet */
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+
+.sidebar {
+    display: grid;
+    grid-template-columns: repeat(
+    auto-fit);
+    padding-left: 0.5rem;
+    width: 1rem;
+    position: fixed;
+    height: 100%;
+    z-index: 3; 
+  }
+  /* End of sidebar css sheet */

@@ -1,0 +1,40 @@
+/* Beginning of companies css sheet */
+.card-container {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    grid-template-columns: minmax(100px 1fr) 1fr;
+    margin-left: 7rem;
+    margin-top: 2rem;
+    z-index: -2;
+  }
+  
+  .card {
+    margin: 2rem;
+    border: 2px solid #ededed;
+    padding: 2.1rem;
+    cursor: pointer;
+  }
+  
+  .card-img {
+    width: 13rem;
+    margin-bottom: 1rem;
+  }
+  
+  .company {
+    margin-bottom: 1rem;
+  }
+  
+  
+  .category {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+  }
+  
+  .service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* Beginning of companies css sheet */
