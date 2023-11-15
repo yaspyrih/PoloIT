@@ -16,6 +16,8 @@
     cursor: pointer;
     transition: 0.3s;
 }
+
+
 .dark_mode_label:after {
     content: "";
     width: 25px;
@@ -55,11 +57,13 @@
     left: 5px;
     fill: #fff;
     transition: 0.3s;
+    background: transparent;
 }
 .dark_mode_label svg.moon {
     left: 40px;
     fill: #7e7e7e;
     transition: 0.3s;
+    background: transparent;
 }
 .dark_mode_input:checked + .dark_mode_label svg.sun {
     fill: #7e7e7e;

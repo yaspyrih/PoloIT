@@ -1,6 +1,7 @@
-* {
-
+.checkmark :focus {
+    outline: 1px solid transparent;
 }
+
 .ml{
     margin: 0.1em;
 }
