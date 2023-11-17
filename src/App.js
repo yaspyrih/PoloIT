@@ -1,16 +1,16 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import "./index.css";
 import Nav from "./Navigation/Nav";
 import Companies from "./Companies/Companies";
-import data from "./db/data";
 import Sidebar from "./Sidebar/Sidebar";
 import Card from "./components/Card";
 import DarkMode from "./components/DarkMode/DarkMode";
 
-
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [query, setQuery] = useState("");
+  const [dataFromBackend, setDataFromBackend] = useState([]);
 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
@@ -25,7 +25,10 @@ function App() {
 
     if (query) {
       filteredItems = filteredItems.filter((item) =>
-        item.company.toLowerCase().includes(query.toLowerCase())
+        {
+          console.log(item.company)
+        return item.company && item.company.toString().toLowerCase().includes(query.toLowerCase());
+        }
       );
     }
 
@@ -37,9 +40,9 @@ function App() {
     }
 
     return filteredItems.map(
-      ({ img, company, description, service, category, web, linkedin, email }) => (
+      ({ img, company, description, service, category, web, linkedin, email }, index) => (
         <Card
-          key={company}
+          key={"empresa-"+index}
           img={img}
           company={company}
           description={description}
@@ -53,21 +56,43 @@ function App() {
     );
   }
 
-  const result = filteredData(data, selectedCategory, query);
+  const result = filteredData(dataFromBackend, selectedCategory, query);
+
+  useEffect(() => {
+    axios.get('http://localhost:8080/api/empresas')
+      .then(response => {
+        console.log('Datos obtenidos desde el backend:', response.data);
+        setDataFromBackend(response.data.map((empresa)=>{
+          return{
+            img:"test",
+            company:empresa["Empresa"],
+            description: empresa["Breve Descripción de tu empresa"],
+            service:"test",
+            category:"test",
+            web:"test",
+            linkedin:"test",
+            email:"test"
+          }
+        })
+        );
+      })
+      .catch(error => {
+        console.error('Error fetching data from backend:', error);
+      });
+  }, []);
 
   return (
     <>
-    
-    <div className="nav-and-toggle-container"> 
-      <div className="nav-container">
-        <Nav query={query} handleInputChange={handleInputChange} className="nav"/>
-      </div> 
-      <div className="toggle-container">
-        <DarkMode/>
-      </div> 
-    </div> 
-      <Sidebar handleChange={handleChange} className="sidebar"/>
-      <Companies result={result} className="card-container"/>
+      <div className="nav-and-toggle-container">
+        <div className="nav-container">
+          <Nav query={query} handleInputChange={handleInputChange} className="nav" />
+        </div>
+        <div className="toggle-container">
+          <DarkMode />
+        </div>
+      </div>
+      <Sidebar handleChange={handleChange} className="sidebar" />
+      <Companies result={result} className="card-container" />
     </>
   );
 }
