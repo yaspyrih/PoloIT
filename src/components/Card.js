@@ -1,21 +1,24 @@
-import {BiHomeHeart} from 'react-icons/bi';
-import {FaLinkedinIn} from 'react-icons/fa';
-import {AiFillMail} from 'react-icons/ai';
-import Modal from './Modal/Modal';
+import { Card, CardBody, Image, Stack, Heading, Text,  CardFooter, ButtonGroup, Button } from '@chakra-ui/react';
 
-function Card({img, company, description, service, category, web, linkedin, email}) {
-  return ( 
-  <section className='card'>
-  <img 
-  src={img}
-  alt={company} className='card-img'></img>
-  <h2 className='company'>{company}</h2>
-  <p className='description'>{description}</p>
-  <h5 className='service'>{service} {category}</h5>
-  <BiHomeHeart href={web}/>
-  <FaLinkedinIn href={linkedin}/>
-  <Modal/>
-  </section>
-  )
+function CustomCard({ img, company, description, service, category, web, linkedin, email }) {
+  return (
+    <Card maxW='sm' boxShadow='2xl' mb='4'>
+      <CardBody>
+        <Image src={img} alt={company} borderRadius='lg' maxH='200px' />
+        <Stack mt='6' spacing='3'>
+          <Heading size='md'>{company}</Heading>
+          <Text>{description}</Text>
+          <Text color='blue.600' fontSize='l'>{service} {category}</Text>
+        </Stack>
+      </CardBody>
+      <CardFooter>
+        <ButtonGroup spacing='2'>
+          <Button as='a' href={web} variant='solid' colorScheme='blue'>Contacto</Button>
+          {/* Agrega otros botones o acciones aquí */}
+        </ButtonGroup>
+      </CardFooter>
+    </Card>
+  );
 }
-export default Card
+
+export default CustomCard;

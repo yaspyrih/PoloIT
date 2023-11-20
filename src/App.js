@@ -4,8 +4,10 @@ import "./index.css";
 import Nav from "./Navigation/Nav";
 import Companies from "./Companies/Companies";
 import Sidebar from "./Sidebar/Sidebar";
-import Card from "./components/Card";
+import { Center, SimpleGrid } from '@chakra-ui/react';
+import CustomCard from "./components/Card";
 import DarkMode from "./components/DarkMode/DarkMode";
+
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -39,20 +41,24 @@ function App() {
       );
     }
 
-    return filteredItems.map(
-      ({ img, company, description, service, category, web, linkedin, email }, index) => (
-        <Card
-          key={"empresa-"+index}
-          img={img}
-          company={company}
-          description={description}
-          service={service}
-          category={category}
-          web={web}
-          linkedin={linkedin}
-          email={email}
-        />
-      )
+    return (
+      <Center>
+        <SimpleGrid columns={3} spacing={4}>
+          {filteredItems.map(({ img, company, description, service, category, web, linkedin, email }, index) => (
+            <CustomCard
+              key={"empresa-" + index}
+              img={img}
+              company={company}
+              description={description}
+              service={service}
+              category={category}
+              web={web}
+              linkedin={linkedin}
+              email={email}
+            />
+          ))}
+        </SimpleGrid>
+      </Center>
     );
   }
 
@@ -64,14 +70,10 @@ function App() {
         console.log('Datos obtenidos desde el backend:', response.data);
         setDataFromBackend(response.data.map((empresa)=>{
           return{
-            img:"test",
-            company:empresa["Empresa"],
+            img: empresa["Imagen"],
+            company: empresa["Empresa"],
             description: empresa["Breve Descripción de tu empresa"],
-            service:"test",
-            category:"test",
-            web:"test",
-            linkedin:"test",
-            email:"test"
+            service: empresa["Servicios Verticales"],
           }
         })
         );
