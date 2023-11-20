@@ -7,6 +7,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import { Center, SimpleGrid } from '@chakra-ui/react';
 import CustomCard from "./components/Card";
 import DarkMode from "./components/DarkMode/DarkMode";
+import initScrollReveal from './utils/scrollRevealInit';
 
 
 function App() {
@@ -63,6 +64,10 @@ function App() {
   }
 
   const result = filteredData(dataFromBackend, selectedCategory, query);
+
+  useEffect(() => {
+    initScrollReveal();
+  }, []);
 
   useEffect(() => {
     axios.get('http://localhost:8080/api/empresas')
