@@ -5,7 +5,7 @@
     grid-template-columns: minmax(100px 1fr) 1fr;
     margin-left: 7rem;
     margin-top: 2rem;
-    z-index: -2;
+    /*z-index: -2;*/
   }
   
   .card {
