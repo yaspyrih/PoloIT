@@ -1,3 +1,4 @@
+/*start of card.js*/
 import { Card, CardBody, Image, Stack, Heading, Text,  CardFooter, ButtonGroup, Button } from '@chakra-ui/react';
 
 function CustomCard({ img, company, description, service, category, web, linkedin, email }) {
@@ -21,3 +22,4 @@ function CustomCard({ img, company, description, service, category, web, linkedi
 }
 
 export default CustomCard;
+/*end of card.js*/

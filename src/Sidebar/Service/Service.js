@@ -1,3 +1,4 @@
+/*start of service.js*/
 import Input from '../../components/Input';
 import './Service.css';
 
@@ -82,3 +83,4 @@ function Service({handleChange}) {
   )
 }
 export default Service
+/*end of service.js*/

@@ -1,36 +1,36 @@
-import Input from '../../components/Input';
-import './Category.css';
+import React, { useState } from 'react';
+import CustomCard from '../../components/Card';
 
-function Category({handleChange}) {
+
+const categories = ['Todas', 'Software', 'Hardware', 'Big Data', 'Retail', 'Inteligencia Artificial'];
+
+function FilteringComponent() {
+  const [selectedCategory, setSelectedCategory] = useState('Todas');
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
+  const filteredCards = (cards) => {
+    if (selectedCategory === 'Todas') {
+      return cards;
+    }
+
+    return cards.filter((card) => card.category.toLowerCase().includes(selectedCategory.toLowerCase()));
+  };
+
   return (
-      <div className='sidebar-category'>
-        <h2 className='sidebar-title'>Categoría</h2>
-        <div>
-          <label className='sidebar-label-container'>
-            <input onChange={handleChange} type="radio" value="" name="test"/>
-            <span className='checkmark'></span>Todas
-          </label>
-
-        <Input
-        handleChange={handleChange}
-        value="Tecnología"
-        company="Tecnología"
-        name="test"
-        />
-        <Input
-        handleChange={handleChange}
-        value="Finanzas"
-        company="Finanzas"
-        name="test"
-        />
-        <Input
-        handleChange={handleChange}
-        value="Consultoría"
-        company="Consultoría"
-        name="test"
-        />
-        </div>
+    <div className="filtering-container">
+      <div className="filter-dropdown">
+        <label>Filtrar por categoría:</label>
+        <select value={selectedCategory} onChange={handleCategoryChange}>
+          {categories.map((category) => (
+            <option key={category} value={category}>{category}</option>
+          ))}
+        </select>
       </div>
+    </div>
   );
 }
-export default Category
+
+export default FilteringComponent;

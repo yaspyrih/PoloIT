@@ -13,7 +13,7 @@ function Nav(props) {
       className='search-input'
       value = {query}
       onChange = {handleInputChange}
-      placeholder='Ingrese el nombre de una empresa.'/>
+      placeholder='Ingrese una empresa.'/>
      
       
       
