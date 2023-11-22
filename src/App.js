@@ -15,6 +15,14 @@ function App() {
   const [query, setQuery] = useState("");
   const [dataFromBackend, setDataFromBackend] = useState([]);
 
+  const handleDropdownChange = (selectedCategory) => {
+    const updatedQuery = selectedCategory === 'Todas'
+      ? ''
+      : selectedCategory;
+    setQuery(updatedQuery);
+  };
+
+
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
@@ -92,7 +100,7 @@ function App() {
     <>
       <div className="nav-and-toggle-container">
         <div className="nav-container">
-          <Nav query={query} handleInputChange={handleInputChange} className="nav" />
+          <Nav query={query} handleInputChange={handleInputChange} handleDropdownChange={handleDropdownChange} className="nav" />
         </div>
         <div className="toggle-container">
           <DarkMode />

@@ -1,3 +1,4 @@
+/*start of Modal*/
 import React, { useState } from "react";
 import "./Modal.css";
 
@@ -41,3 +42,4 @@ export default function Modal({company, email}) {
     </>
   );
 }
+/*end of Modal*/
